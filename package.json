@@ -1,0 +1,28 @@
+{
+  "name": "log",
+  "version": "0.1.0",
+  "description": "colorful logs",
+  "main": "log.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/somax/log"
+  },
+  "keywords": [
+    "log",
+    "debug",
+    "chalk",
+    "colorful"
+  ],
+  "author": "MaXiaojun <somaxj@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/somax/log/issues"
+  },
+  "homepage": "https://github.com/somax/log",
+  "dependencies": {
+    "chalk": "^1.0.0"
+  }
+}
