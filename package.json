@@ -1,8 +1,8 @@
 {
-  "name": "log",
+  "name": "solog",
   "version": "0.1.1",
   "description": "colorful logs",
-  "main": "log.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
