@@ -1,7 +1,7 @@
 # A simple module, use color to distinguish the log categories
 
 ## install
-    npm install somax/log
+    npm install solog
 
 ## usage
 	var log = require('log');
