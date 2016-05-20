@@ -5,25 +5,30 @@ var util = require('util'),
 	chalk = require('chalk');
 
 var color = {};
-var isDev =  process.env.NODE_ENV === 'develop' || process.env.NODE_ENV === undefined;
+var isDev =  process.env.NODE_ENV === 'development' || process.env.NODE_ENV === undefined;
 
 var log = function() {
 	_log('log', arguments);
 };
 
 var alias = 'log info debug warn err'.split(' ');
-var colors = 'inverse green cyan yellow black.bgRed'.split(' ');
+var colors = 'inverse black.bgGreen black.bgCyan black.bgYellow black.bgRed'.split(' ');
 
+
+var _makeLogFun = function(_a) {
+		return function() {
+			_log(_a, arguments);
+		};
+	};
 
 for (var i = 0; i < alias.length; i++) {
 	var a = alias[i];
 	color[a] = eval('chalk.' + colors[i]);
-	log[a] = (function(_a) {
-		return function() {
-			_log(_a, arguments);
-		};
-	})(a);
+	log[a] = _makeLogFun(a);
 }
+
+// alias err
+log.error = log.err;
 
 function _log(type, args) {
 	// only show debug in Develop Environment
