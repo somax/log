@@ -47,4 +47,9 @@ function _log(type, args) {
 	console.log('');
 }
 
+log.setDevelopMode = function(_isDev){
+	isDev = _isDev;
+}
+
+
 module.exports = log;
