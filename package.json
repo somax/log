@@ -1,6 +1,6 @@
 {
   "name": "solog",
-  "version": "0.1.1-a",
+  "version": "0.2.0",
   "description": "colorful logs",
   "main": "index.js",
   "scripts": {
